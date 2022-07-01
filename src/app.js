@@ -1,7 +1,7 @@
 // Take a DOM Elements
 const time = document.getElementById('time'),
     greeting = document.getElementById('greeting'),
-    name = document.getElementById('name'),
+    yourName = document.getElementById('name'),
     focus = document.getElementById('focus');
 
 // Show Time
@@ -60,9 +60,9 @@ function setBgGreet() {
 // Get Name
 function getName() {
     if (localStorage.getItem('name') === null) {
-        name.textContent = '[Enter Your Name]';
+        yourName.textContent = '[Enter Your Name]';
     } else {
-        name.textContent = localStorage.getItem('name');
+        yourName.textContent = localStorage.getItem('name');
     }
 };
 
@@ -72,7 +72,7 @@ function setName(e) {
         // Make sure enter is pressed
         if (e.which === 13 || e.keyCode === 13) {
             localStorage.setItem('name', e.target.innerText);
-            name.blur();
+            yourName.blur();
         }
     } else {
         localStorage.setItem('name', e.target.innerText)
@@ -101,8 +101,8 @@ function setFocus(e) {
     }
 };
 
-name.addEventListener('keypress', setName);
-name.addEventListener('blur', setName);
+yourName.addEventListener('keypress', setName);
+yourName.addEventListener('blur', setName);
 focus.addEventListener('keypress', setFocus);
 focus.addEventListener('blur', setFocus);
 
