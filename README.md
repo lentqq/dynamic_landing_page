@@ -20,7 +20,7 @@ $ git clone https://github.com/lentqq/dynamic-landing-page.git
 ## How To View
 
 * __Locally__: Start "Live Server" in __Visual Studio Code__.
-* __On the Web__: https://be-focused.000webhostapp.com/
+* __On the Web__: http://befocused.epizy.com
 
 ## Tech Used
 
